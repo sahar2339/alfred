@@ -2,4 +2,5 @@ from pydantic import BaseModel
 
 
 class Label(BaseModel):
-    pass
+    key: str
+    value: str

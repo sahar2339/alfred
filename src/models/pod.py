@@ -2,8 +2,11 @@ from pydantic import BaseModel
 
 
 class UnhealthyPod(BaseModel):
-    pass
+    pod_name: str
+    namespace: str
 
 
 class Pod(BaseModel):
-    pass
+    pod_name: str
+    namespace: str
+    node_name: str

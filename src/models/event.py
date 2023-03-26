@@ -2,4 +2,4 @@ from pydantic import BaseModel
 
 
 class Event(BaseModel):
-    pass
+    note: str
