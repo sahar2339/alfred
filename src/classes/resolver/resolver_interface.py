@@ -9,7 +9,7 @@ class ResolverInterface(ABC):
 
     @abstractmethod
     def resolve(self, unhealthy_node: UnhealthyNode):
-        pass
+        raise NotImplementedError
 
     def _pre_resolve(self, unhealthy_node: UnhealthyNode):
         pass
