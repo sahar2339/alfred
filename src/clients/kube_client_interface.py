@@ -1,6 +1,7 @@
-from abc import ABC
+from abc import ABC, abstractmethod
 
-class kubernetes_client(ABC):
+
+class KubeClientInterface(ABC):
 
     def get_Client(self) -> None:
         pass
@@ -17,16 +18,16 @@ class kubernetes_client(ABC):
     def cordon_node(self, node: str) -> None:
         pass
 
-    def uncordon_node(self, node:str) -> None:
+    def uncordon_node(self, node: str) -> None:
         pass
 
-    def create_example_pod(self, node:str,  namespace: str) -> None:
+    def create_example_pod(self, node: str, namespace: str) -> None:
         pass
 
     def delete_Pod(self, pod: str, namespace: str) -> None:
         pass
 
-    def create_poison_pill(self, node:str, namespace: str) -> None:
+    def create_poison_pill(self, node: str, namespace: str) -> None:
         pass
 
     def get_poision_pill(self, namespace: str) -> list:

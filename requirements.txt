@@ -1,3 +1,4 @@
 pydantic
 openshift
 kubernetes
+python-dotenv
